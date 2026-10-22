@@ -1,0 +1,32 @@
+
+# Python et Django
+__pycache__/
+*.py[cod]
+*.log
+.venv/
+venv/
+.env
+.env.*
+
+# Exceptions pour les exemples de configuration
+!.env.example
+
+# Bases de données locales et sauvegardes
+serveur/db.sqlite3
+serveur/db_avant_import.sqlite3
+*.sqlite3
+*.db
+*.sql
+*.bak
+*.dump
+
+# React / Vite
+interface/node_modules/
+interface/dist/
+interface/.env
+interface/.env.*
+!interface/.env.example
+
+# Fichiers générés
+.DS_Store
+Thumbs.db
