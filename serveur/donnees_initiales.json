@@ -1,0 +1,505 @@
+[
+  {
+    "model": "evenements.organisateur",
+    "pk": 1,
+    "fields": {
+      "nom_organisateur": "Tana Culture Events",
+      "telephone": "0320000001",
+      "email": "contact@tanaculture-events.mg"
+    }
+  },
+  {
+    "model": "evenements.organisateur",
+    "pk": 2,
+    "fields": {
+      "nom_organisateur": "Mada Live Production",
+      "telephone": "0330000002",
+      "email": "contact@madalive-production.mg"
+    }
+  },
+  {
+    "model": "evenements.organisateur",
+    "pk": 3,
+    "fields": {
+      "nom_organisateur": "Antananarivo Arts Festival",
+      "telephone": "0340000003",
+      "email": "contact@tanaarts-festival.mg"
+    }
+  },
+  {
+    "model": "evenements.lieu",
+    "pk": 1,
+    "fields": {
+      "nom_lieu": "CCI Ivato",
+      "adresse": "Route de Tsarasaotra, Ivato, Antananarivo",
+      "capacite_max": 500
+    }
+  },
+  {
+    "model": "evenements.lieu",
+    "pk": 2,
+    "fields": {
+      "nom_lieu": "Palais des Sports Mahamasina",
+      "adresse": "Mahamasina, Antananarivo",
+      "capacite_max": 8000
+    }
+  },
+  {
+    "model": "evenements.lieu",
+    "pk": 3,
+    "fields": {
+      "nom_lieu": "Coliseum Antsonjombe",
+      "adresse": "Antsonjombe, Antananarivo",
+      "capacite_max": 5000
+    }
+  },
+  {
+    "model": "evenements.evenement",
+    "pk": 1,
+    "fields": {
+      "nom_evenement": "Tana Music Night",
+      "date_evenement": "2026-09-12",
+      "heure_evenement": "19:00:00",
+      "description": "Grande soirée musicale réunissant plusieurs artistes malgaches.",
+      "type_evenement": "Concert",
+      "lieu": 1,
+      "organisateur": 1
+    }
+  },
+  {
+    "model": "evenements.evenement",
+    "pk": 2,
+    "fields": {
+      "nom_evenement": "Festival des Musiques de Madagascar",
+      "date_evenement": "2026-10-10",
+      "heure_evenement": "18:00:00",
+      "description": "Festival consacré à la diversité des musiques malgaches.",
+      "type_evenement": "Festival",
+      "lieu": 2,
+      "organisateur": 3
+    }
+  },
+  {
+    "model": "evenements.evenement",
+    "pk": 3,
+    "fields": {
+      "nom_evenement": "Tana Pop Rock Live",
+      "date_evenement": "2026-11-21",
+      "heure_evenement": "19:30:00",
+      "description": "Soirée dédiée à la musique pop rock malgache.",
+      "type_evenement": "Concert",
+      "lieu": 3,
+      "organisateur": 2
+    }
+  },
+  {
+    "model": "evenements.artiste",
+    "pk": 1,
+    "fields": {
+      "nom_artiste": "Ambondrona",
+      "genre_artistique": "Pop Rock",
+      "telephone": "0321000011",
+      "email": "ambondrona@demo.mg"
+    }
+  },
+  {
+    "model": "evenements.artiste",
+    "pk": 2,
+    "fields": {
+      "nom_artiste": "Mahaleo",
+      "genre_artistique": "Folk malgache",
+      "telephone": "0321000012",
+      "email": "mahaleo@demo.mg"
+    }
+  },
+  {
+    "model": "evenements.artiste",
+    "pk": 3,
+    "fields": {
+      "nom_artiste": "Jaojoby",
+      "genre_artistique": "Salegy",
+      "telephone": "0321000013",
+      "email": "jaojoby@demo.mg"
+    }
+  },
+  {
+    "model": "evenements.artiste",
+    "pk": 4,
+    "fields": {
+      "nom_artiste": "Rija Ramanantoanina",
+      "genre_artistique": "Jazz",
+      "telephone": "0321000014",
+      "email": "rija@demo.mg"
+    }
+  },
+  {
+    "model": "evenements.categorieticket",
+    "pk": 1,
+    "fields": {
+      "nom_categorie": "Standard",
+      "prix": "25000.00",
+      "nombre_places": 299,
+      "evenement": 1
+    }
+  },
+  {
+    "model": "evenements.categorieticket",
+    "pk": 2,
+    "fields": {
+      "nom_categorie": "VIP",
+      "prix": "50000.00",
+      "nombre_places": 146,
+      "evenement": 1
+    }
+  },
+  {
+    "model": "evenements.categorieticket",
+    "pk": 3,
+    "fields": {
+      "nom_categorie": "VVIP",
+      "prix": "100000.00",
+      "nombre_places": 50,
+      "evenement": 1
+    }
+  },
+  {
+    "model": "evenements.categorieticket",
+    "pk": 4,
+    "fields": {
+      "nom_categorie": "Standard",
+      "prix": "20000.00",
+      "nombre_places": 1000,
+      "evenement": 2
+    }
+  },
+  {
+    "model": "evenements.categorieticket",
+    "pk": 5,
+    "fields": {
+      "nom_categorie": "VIP",
+      "prix": "40000.00",
+      "nombre_places": 500,
+      "evenement": 2
+    }
+  },
+  {
+    "model": "evenements.categorieticket",
+    "pk": 6,
+    "fields": {
+      "nom_categorie": "VVIP",
+      "prix": "75000.00",
+      "nombre_places": 100,
+      "evenement": 2
+    }
+  },
+  {
+    "model": "evenements.categorieticket",
+    "pk": 7,
+    "fields": {
+      "nom_categorie": "Standard",
+      "prix": "30000.00",
+      "nombre_places": 2497,
+      "evenement": 3
+    }
+  },
+  {
+    "model": "evenements.categorieticket",
+    "pk": 8,
+    "fields": {
+      "nom_categorie": "VIP",
+      "prix": "60000.00",
+      "nombre_places": 500,
+      "evenement": 3
+    }
+  },
+  {
+    "model": "evenements.client",
+    "pk": 1,
+    "fields": {
+      "nom": "RAKOTO",
+      "prenom": "Jean",
+      "telephone": "0321100001",
+      "email": "jean.rakoto@demo.mg"
+    }
+  },
+  {
+    "model": "evenements.client",
+    "pk": 2,
+    "fields": {
+      "nom": "RABEARISOA",
+      "prenom": "Mialy",
+      "telephone": "0331100002",
+      "email": "mialy.rabearisoa@demo.mg"
+    }
+  },
+  {
+    "model": "evenements.client",
+    "pk": 3,
+    "fields": {
+      "nom": "RANDRIANARISOA",
+      "prenom": "Toky",
+      "telephone": "0341100003",
+      "email": "toky.randrianarisoa@demo.mg"
+    }
+  },
+  {
+    "model": "evenements.client",
+    "pk": 4,
+    "fields": {
+      "nom": "RAKOTONDRABE",
+      "prenom": "Hery",
+      "telephone": "0321100004",
+      "email": "hery.rakotondrabe@demo.mg"
+    }
+  },
+  {
+    "model": "evenements.client",
+    "pk": 5,
+    "fields": {
+      "nom": "RASOLO",
+      "prenom": "Anja",
+      "telephone": "0331100005",
+      "email": "anja.rasolo@demo.mg"
+    }
+  },
+  {
+    "model": "evenements.client",
+    "pk": 6,
+    "fields": {
+      "nom": "ANDRIAMBOLOLONA",
+      "prenom": "Fara",
+      "telephone": "0341100006",
+      "email": "fara.andriambolona@demo.mg"
+    }
+  },
+  {
+    "model": "evenements.client",
+    "pk": 7,
+    "fields": {
+      "nom": "CLIENT",
+      "prenom": "Demo",
+      "telephone": "0340000099",
+      "email": "client.demo@example.com"
+    }
+  },
+  {
+    "model": "evenements.reservation",
+    "pk": 7,
+    "fields": {
+      "date_reservation": "2026-08-17",
+      "quantite_ticket": 2,
+      "statut": "Confirmée",
+      "client": 1,
+      "categorie": 2
+    }
+  },
+  {
+    "model": "evenements.reservation",
+    "pk": 8,
+    "fields": {
+      "date_reservation": "2026-08-17",
+      "quantite_ticket": 3,
+      "statut": "Confirmée",
+      "client": 2,
+      "categorie": 1
+    }
+  },
+  {
+    "model": "evenements.reservation",
+    "pk": 9,
+    "fields": {
+      "date_reservation": "2026-08-18",
+      "quantite_ticket": 1,
+      "statut": "En attente",
+      "client": 3,
+      "categorie": 3
+    }
+  },
+  {
+    "model": "evenements.reservation",
+    "pk": 10,
+    "fields": {
+      "date_reservation": "2026-08-18",
+      "quantite_ticket": 4,
+      "statut": "Confirmée",
+      "client": 4,
+      "categorie": 4
+    }
+  },
+  {
+    "model": "evenements.reservation",
+    "pk": 11,
+    "fields": {
+      "date_reservation": "2026-08-19",
+      "quantite_ticket": 2,
+      "statut": "Confirmée",
+      "client": 5,
+      "categorie": 5
+    }
+  },
+  {
+    "model": "evenements.reservation",
+    "pk": 12,
+    "fields": {
+      "date_reservation": "2026-08-19",
+      "quantite_ticket": 2,
+      "statut": "En attente",
+      "client": 6,
+      "categorie": 7
+    }
+  },
+  {
+    "model": "evenements.reservation",
+    "pk": 13,
+    "fields": {
+      "date_reservation": "2026-08-19",
+      "quantite_ticket": 2,
+      "statut": "En attente",
+      "client": 1,
+      "categorie": 2
+    }
+  },
+  {
+    "model": "evenements.reservation",
+    "pk": 14,
+    "fields": {
+      "date_reservation": "2026-08-19",
+      "quantite_ticket": 1,
+      "statut": "En attente",
+      "client": 2,
+      "categorie": 1
+    }
+  },
+  {
+    "model": "evenements.reservation",
+    "pk": 15,
+    "fields": {
+      "date_reservation": "2026-10-21",
+      "quantite_ticket": 3,
+      "statut": "En attente",
+      "client": 7,
+      "categorie": 7
+    }
+  },
+  {
+    "model": "evenements.paiement",
+    "pk": 2,
+    "fields": {
+      "montant": "100000.00",
+      "date_paiement": "2026-08-17",
+      "mode_paiement": "MVola",
+      "statut_paiement": "Paye",
+      "reservation": 7
+    }
+  },
+  {
+    "model": "evenements.paiement",
+    "pk": 3,
+    "fields": {
+      "montant": "75000.00",
+      "date_paiement": "2026-08-17",
+      "mode_paiement": "Orange Money",
+      "statut_paiement": "Paye",
+      "reservation": 8
+    }
+  },
+  {
+    "model": "evenements.paiement",
+    "pk": 4,
+    "fields": {
+      "montant": "80000.00",
+      "date_paiement": "2026-08-18",
+      "mode_paiement": "MVola",
+      "statut_paiement": "Paye",
+      "reservation": 10
+    }
+  },
+  {
+    "model": "evenements.paiement",
+    "pk": 5,
+    "fields": {
+      "montant": "80000.00",
+      "date_paiement": "2026-08-19",
+      "mode_paiement": "Especes",
+      "statut_paiement": "Paye",
+      "reservation": 11
+    }
+  },
+  {
+    "model": "evenements.paiement",
+    "pk": 6,
+    "fields": {
+      "montant": "90000.00",
+      "date_paiement": null,
+      "mode_paiement": "Non effectué",
+      "statut_paiement": "En attente",
+      "reservation": 15
+    }
+  },
+  {
+    "model": "evenements.participation",
+    "pk": [
+      1,
+      1
+    ],
+    "fields": {
+      "artiste": 1,
+      "evenement": 1
+    }
+  },
+  {
+    "model": "evenements.participation",
+    "pk": [
+      1,
+      3
+    ],
+    "fields": {
+      "artiste": 1,
+      "evenement": 3
+    }
+  },
+  {
+    "model": "evenements.participation",
+    "pk": [
+      2,
+      2
+    ],
+    "fields": {
+      "artiste": 2,
+      "evenement": 2
+    }
+  },
+  {
+    "model": "evenements.participation",
+    "pk": [
+      3,
+      1
+    ],
+    "fields": {
+      "artiste": 3,
+      "evenement": 1
+    }
+  },
+  {
+    "model": "evenements.participation",
+    "pk": [
+      3,
+      2
+    ],
+    "fields": {
+      "artiste": 3,
+      "evenement": 2
+    }
+  },
+  {
+    "model": "evenements.participation",
+    "pk": [
+      4,
+      3
+    ],
+    "fields": {
+      "artiste": 4,
+      "evenement": 3
+    }
+  }
+]
