@@ -1,0 +1,372 @@
+
+.bouton-compte {
+  border: 0;
+  border-radius: 10px;
+  padding: 12px 19px;
+  background: var(--couleur-bordeaux);
+  color: #fff;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.bouton-compte:hover {
+  background: var(--couleur-bordeaux-fonce);
+  transform: translateY(-1px);
+}
+
+.compte-fond {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  overflow-y: auto;
+  background: rgba(20, 22, 40, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+.compte-fenetre {
+  position: relative;
+  width: 100%;
+  max-width: 510px;
+  max-height: 92vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  padding: clamp(22px, 5vw, 34px);
+  border: 1px solid #ece8fa;
+  border-radius: 20px;
+  background: #fff;
+  color: #202536;
+  box-shadow: 0 25px 90px rgba(12, 10, 35, 0.28);
+}
+
+.compte-fermer {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 50%;
+  background: #f2effb;
+  color: #45316e;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.compte-entete {
+  padding-right: 28px;
+  margin-bottom: 22px;
+}
+
+.compte-surtitre {
+  color: var(--couleur-bordeaux);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+}
+
+.compte-entete h2 {
+  margin: 9px 0;
+  color: #202536;
+  font-size: clamp(25px, 5vw, 31px);
+}
+
+.compte-entete p,
+.compte-bas-fenetre {
+  color: #73778a;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.compte-onglets {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  padding: 5px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  background: var(--couleur-creme);
+}
+
+.compte-onglets button {
+  padding: 11px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: #68647b;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.compte-onglets button.selectionne {
+  background: #fff;
+  color: var(--couleur-bordeaux);
+  box-shadow: 0 2px 8px rgba(50, 35, 100, 0.09);
+}
+
+.compte-formulaire {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.compte-formulaire label {
+  margin-top: 6px;
+  color: #35384b;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.compte-formulaire input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 13px;
+  border: 1px solid #dfe0e9;
+  border-radius: 9px;
+  outline: none;
+  background: #fff;
+  color: #202536;
+  font: inherit;
+  font-size: 14px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.compte-formulaire input:focus {
+  border-color: #8c72ec;
+  box-shadow: 0 0 0 3px rgba(108, 75, 232, 0.12);
+}
+
+.compte-bouton-principal,
+.compte-bouton-secondaire {
+  width: 100%;
+  margin-top: 15px;
+  padding: 13px 16px;
+  border: 0;
+  border-radius: 10px;
+  font: inherit;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.compte-bouton-principal {
+  background: var(--couleur-bordeaux);
+  color: #fff;
+}
+
+.compte-bouton-principal:hover {
+  background: var(--couleur-bordeaux-fonce);
+}
+
+.compte-bouton-secondaire {
+  background: #f4f1fc;
+  color: var(--couleur-bordeaux);
+}
+
+.compte-bouton-principal:disabled,
+.compte-bouton-secondaire:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.compte-alerte {
+  padding: 12px 14px;
+  border-radius: 9px;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.compte-erreur {
+  border: 1px solid #f2c6c4;
+  background: #fff1f0;
+  color: #a32620;
+}
+
+.compte-succes {
+  border: 1px solid #bce5cc;
+  background: #effaf3;
+  color: #17683b;
+}
+
+.compte-profil {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 15px;
+  border: 1px solid #eee9fc;
+  border-radius: 12px;
+  background: #faf9ff;
+}
+
+.compte-avatar {
+  display: grid;
+  flex: 0 0 45px;
+  place-items: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: var(--couleur-creme);
+  color: var(--couleur-bordeaux);
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.compte-profil div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  min-width: 0;
+}
+
+.compte-profil strong {
+  overflow-wrap: anywhere;
+  font-size: 14px;
+}
+
+.compte-profil div span {
+  overflow-wrap: anywhere;
+  color: #77798b;
+  font-size: 12px;
+}
+
+.compte-reservations-entete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 24px 0 12px;
+}
+
+.compte-reservations-entete h3 {
+  margin: 0;
+  font-size: 17px;
+}
+
+.compte-reservations-entete button {
+  padding: 8px 11px;
+  border: 1px solid #e4dcff;
+  border-radius: 8px;
+  background: #fff;
+  color: var(--couleur-bordeaux);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.compte-vide {
+  padding: 23px 16px;
+  border: 1px dashed #dcd4f4;
+  border-radius: 12px;
+  background: #fbfaff;
+  text-align: center;
+}
+
+.compte-vide > span {
+  display: block;
+  margin-bottom: 9px;
+  color: #8063df;
+  font-size: 30px;
+}
+
+.compte-vide strong {
+  font-size: 14px;
+}
+
+.compte-vide p,
+.compte-texte-secondaire {
+  color: #77798b;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.compte-liste-reservations {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.compte-reservation {
+  padding: 14px;
+  border: 1px solid #ece8f7;
+  border-radius: 12px;
+}
+
+.compte-reservation-titre {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.compte-reservation-titre strong {
+  font-size: 14px;
+}
+
+.compte-reservation-titre span {
+  padding: 5px 8px;
+  border-radius: 20px;
+  background: #f3efff;
+  color: var(--couleur-bordeaux);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.compte-reservation > p {
+  margin: 9px 0 0;
+  color: #77798b;
+  font-size: 12px;
+}
+
+.compte-paiement {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #eeeaf7;
+  font-size: 12px;
+}
+
+.compte-paiement span {
+  color: #77798b;
+}
+
+.compte-bas-fenetre {
+  margin: 22px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid #f0edf7;
+  text-align: center;
+  font-size: 12px;
+}
+
+@media (max-width: 480px) {
+  .compte-fond {
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .compte-fenetre {
+    max-height: calc(100vh - 20px);
+    padding: 22px 17px;
+    border-radius: 15px;
+  }
+
+  .bouton-compte {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .compte-reservation-titre {
+    flex-direction: column;
+  }
+}

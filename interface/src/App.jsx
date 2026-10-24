@@ -1,6 +1,6 @@
-
 import { useEffect, useMemo, useState } from 'react'
 import './App.css'
+import CompteClient from './CompteClient'
 
 function formaterDate(date) {
   if (!date) return 'Date à préciser'
@@ -391,9 +391,7 @@ function App() {
           <a href="#explication">Le projet</a>
         </nav>
 
-        <a className="bouton-connexion" href="#apropos">
-          Notre projet
-        </a>
+        <CompteClient />
       </header>
 
       <main>
@@ -417,16 +415,7 @@ function App() {
 
             <a className="bouton-principal" href="#evenements">
               Découvrir les événements <span>→</span>
-            </a>
-
-            <div className="hero-note">
-              <span className={etatApi ? 'etat-point actif' : 'etat-point'}>
-                ●
-              </span>
-              {etatApi
-                ? 'La plateforme est connectée.'
-                : erreurApi || 'Connexion au serveur en cours...'}
-            </div>
+            </a>            
           </div>
 
           <div className="hero-visuel">
@@ -452,10 +441,7 @@ function App() {
               <span className="illustration-etoile etoile-deux">✳</span>
             </div>
 
-            <p className="legende-visuel">
-              <span>●</span>
-              Les sorties culturelles près de chez vous
-            </p>
+
           </div>
         </section>
 

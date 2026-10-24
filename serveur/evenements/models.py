@@ -1,7 +1,6 @@
-
+from django.conf import settings
 from django.db import models
 from django.core.validators import MinValueValidator
-
 
 class Organisateur(models.Model):
     id_organisateur = models.AutoField(
@@ -178,6 +177,15 @@ class Client(models.Model):
     email = models.EmailField(
         max_length=100, unique=True, null=True, blank=True
     )
+   
+    user = models.OneToOneField(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.SET_NULL,
+        null=True,
+        blank=True,
+        related_name="client_profile",
+    )
+
 
     class Meta:
         db_table = 'client'

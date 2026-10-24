@@ -195,16 +195,39 @@ def reservation_api(request):
                 raise ErreurReservation(
                     "Le nombre de places n'est pas renseigné pour cette catégorie."
                 )
+        
+            if request.user.is_authenticated:
+                try:
+                    client = request.user.client_profile
+                except Client.DoesNotExist:
+                    raise ErreurReservation(
+                        "Aucun profil client n'est associé à ce compte."
+                    )
 
-            client = Client.objects.filter(email=email).first()
 
-            if client and (
-                client.nom.lower() != nom.lower()
-                or client.prenom.lower() != prenom.lower()
-            ):
-                raise ErreurReservation(
-                    "Cette adresse e-mail est déjà associée à un autre profil."
-                )
+                nom = client.nom
+                prenom = client.prenom
+                email = client.email
+
+                if client.telephone:
+                    telephone = client.telephone
+
+            else:
+                client = Client.objects.filter(email__iexact=email).first()
+
+                if client and client.user_id:
+                    raise ErreurReservation(
+                        "Cette adresse e-mail est liée à un compte. "
+                        "Connectez-vous pour poursuivre votre réservation."
+                    )
+
+                if client and (
+                    client.nom.lower() != nom.lower()
+                    or client.prenom.lower() != prenom.lower()
+                ):
+                    raise ErreurReservation(
+                        "Cette adresse e-mail est déjà associée à un autre profil."
+                    )
 
             if telephone:
                 autre_client = Client.objects.filter(
@@ -218,8 +241,7 @@ def reservation_api(request):
                         "Ce numéro de téléphone est déjà associé à un autre profil."
                     )
 
-            # La mise à jour conditionnelle empêche de réserver plus
-            # de places que le stock restant.
+
             places_mises_a_jour = CategorieTicket.objects.filter(
                 id_categorie=id_categorie,
                 evenement_id=id_evenement,
@@ -240,6 +262,9 @@ def reservation_api(request):
                     email=email,
                     telephone=telephone,
                 )
+            elif telephone and not client.telephone:
+                client.telephone = telephone
+                client.save(update_fields=["telephone"])
 
             montant_total = categorie.prix * quantite
 

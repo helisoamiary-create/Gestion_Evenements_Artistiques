@@ -212,26 +212,6 @@ a:focus-visible {
   font-size: 19px;
 }
 
-.hero-note {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  margin-top: 24px;
-  color: var(--couleur-secondaire);
-  font-size: 12px;
-  line-height: 1.6;
-}
-
-.etat-point {
-  color: var(--couleur-ocre);
-  font-size: 12px;
-}
-
-.etat-point.actif {
-  color: #39815c;
-}
-
-
 
 .hero-visuel {
   min-width: 0;
@@ -341,20 +321,6 @@ a:focus-visible {
   right: 36px;
   bottom: 100px;
   font-size: 30px;
-}
-
-.legende-visuel {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  margin: 15px 0 0;
-  color: var(--couleur-secondaire);
-  font-size: 12px;
-}
-
-.legende-visuel span {
-  color: var(--couleur-ocre);
-  font-size: 11px;
 }
 
 
